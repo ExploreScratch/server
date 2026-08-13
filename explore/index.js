@@ -14,7 +14,6 @@ let projects = new Map();
 (async () => {
     for (const curator of curators) {
         const favorites = await request(`https://api.scratch.mit.edu/users/${curator}/favorites`);
-        console.log(`[+] Loading favorites from ${curator}`);
         for (const project of favorites) {
             if (projects.has(project.id)) {
                 projects.get(project.id).count++;
