@@ -1,0 +1,32 @@
+{
+  "podcasts": [
+    {
+      "id": 1311978320,
+      "title": "Contact - SRCast #69",
+      "username": "ScratchRunning",
+      "avatar": "https://cdn2.scratch.mit.edu/get_image/user/26472935_32x32.png?v=",
+      "banner": "https://cdn2.scratch.mit.edu/get_image/project/1311978320_480x360.png"
+    },
+    {
+      "id": 1306347190,
+      "title": "Mental Blocks [SRDevs #3]",
+      "username": "ScratchRunning",
+      "avatar": "https://cdn2.scratch.mit.edu/get_image/user/26472935_32x32.png?v=",
+      "banner": "https://cdn2.scratch.mit.edu/get_image/project/1306347190_480x360.png"
+    },
+    {
+      "id": 1290990906,
+      "title": "StoryCrew 2: From the Chandelier",
+      "username": "scratchstorycrew",
+      "avatar": "https://cdn2.scratch.mit.edu/get_image/user/167646906_32x32.png?v=",
+      "banner": "https://cdn2.scratch.mit.edu/get_image/project/1290990906_480x360.png"
+    },
+    {
+      "id": 1281481692,
+      "title": "StoryCrew 1: Crew Game Night",
+      "username": "scratchstorycrew",
+      "avatar": "https://cdn2.scratch.mit.edu/get_image/user/167646906_32x32.png?v=",
+      "banner": "https://cdn2.scratch.mit.edu/get_image/project/1281481692_480x360.png"
+    }
+  ]
+}
