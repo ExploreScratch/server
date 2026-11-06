@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const request = require('../functions/network');
+import fs from 'node:fs';
+import path from 'node:path';
+import request from '../functions/request.js';
 
 (async () => {
     const podcasts = await request('https://api.scratch.mit.edu/studios/51663430/projects?limit=4');
@@ -18,6 +18,6 @@ const request = require('../functions/network');
             })
         };
 
-        fs.writeFileSync(path.join(__dirname, '../output/site.json'), JSON.stringify(information, null, 2));
+        fs.writeFileSync(path.join(import.meta.dirname, '../output/site.json'), JSON.stringify(information, null, 2));
     }
 })();
