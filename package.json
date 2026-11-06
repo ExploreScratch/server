@@ -3,5 +3,6 @@
     "explore": "node explore/index.js",
     "site": "node site/index.js",
     "build": "npm run explore && npm run site"
-  }
+  },
+  "type": "module"
 }
