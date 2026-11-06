@@ -1,13 +1,15 @@
-const fs = require('fs');
-const path = require('path');
-const request = require('../functions/network');
-const sleep = require('../functions/sleep');
-const weight = require('../functions/weight');
+import fs from 'node:fs';
+import path from 'node:path';
+import request from '../functions/request.js';
+import sleep from '../functions/sleep.js';
+import weight from '../functions/weight.js';
+
+const dirname = import.meta.dirname;
 
 const LIMIT = 350;
 
 // If you are on this list and you would rather not be, you can contact me on scratch @Penthusiast
-const curators = require('./curators.json');
+const curators = JSON.parse(fs.readFileSync(path.join(dirname, './curators.json'), 'utf-8'));
 
 let projects = new Map();
 
@@ -42,7 +44,7 @@ let projects = new Map();
     console.log('[+] Finished discovering projects, processing!');
 
     let finalProjects = [...projects.values()].filter(project => {
-        return (project.loves > 5) && (project.favorites > 5);
+        return (project.loves > 10) && (project.favorites > 10);
     }).map(project => {
         project.weight = weight(project);
         return project;
@@ -60,5 +62,8 @@ let projects = new Map();
         await sleep(20);
     }
 
-    fs.writeFileSync(path.join(__dirname, "../output/explore.json"), JSON.stringify(finalProjects, null, 2));
+    fs.writeFileSync(
+        path.join(dirname, "../output/explore.json"), 
+        JSON.stringify(finalProjects.filter(project => (project.username !== 'SERVER_ERR')), null, 2)
+    );
 })();
