@@ -64,6 +64,6 @@ let projects = new Map();
 
     fs.writeFileSync(
         path.join(dirname, "../output/explore.json"), 
-        JSON.stringify(finalProjects.filter(project => (project.username !== 'SERVER_ERR')), null, 2)
+        JSON.stringify(finalProjects.filter(project => (project.username !== 'SERVER_ERR')), null, 0)
     );
 })();
