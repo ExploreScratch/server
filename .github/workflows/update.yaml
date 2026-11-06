@@ -25,6 +25,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
+      - name: Create output folder
+        run: mkdir -p ./output
           
       - name: Build
         run: npm run build
