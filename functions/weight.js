@@ -4,7 +4,7 @@
  * @returns {float}
  */
 
-function weight(project) {
+export default function weight(project) {
     const shared = new Date(project.shared);
     const now = new Date();
     const age = (now - shared) / (1000 * 60 * 60 * 24 * 40);
@@ -12,5 +12,3 @@ function weight(project) {
     const curatorsWeight = project.count; 
     return ageWeight * curatorsWeight;
 }
-
-module.exports = weight;
