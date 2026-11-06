@@ -4,7 +4,7 @@
  * @returns {object}
  */
 
-async function request(url) {
+export default async function request(url) {
     try {
         const response = await fetch(url);
 
@@ -19,5 +19,3 @@ async function request(url) {
         console.error(error);
     }
 }
-
-module.exports = request;
