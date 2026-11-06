@@ -29,5 +29,5 @@ import request from '../functions/request.js';
         })] : [],
     };
 
-    fs.writeFileSync(path.join(import.meta.dirname, '../output/site.json'), JSON.stringify(information, null, 2));
+    fs.writeFileSync(path.join(import.meta.dirname, '../output/site.json'), JSON.stringify(information, null, 0));
 })();
